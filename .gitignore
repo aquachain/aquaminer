@@ -19,6 +19,7 @@ stamp-h1
 cpuminer-config.h*
 compile
 config.log
+comp.log
 config.status
 config.status.lineno
 config.guess
