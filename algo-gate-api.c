@@ -157,6 +157,9 @@ bool register_algo_gate(int algo, algo_gate_t *gate) {
   case ALGO_ARGON2:
     register_argon2_algo(gate);
     break;
+  case ALGO_ARGON2IDAQUA:
+    register_argon2id_aqua_algo(gate);
+    break;
   case ALGO_ARGON2D250:
     register_argon2d_crds_algo(gate);
     break;
@@ -430,6 +433,7 @@ const char *const algo_alias_map[][2] = {
     {"argon2d-crds", "argon2d250"},
     {"argon2d-dyn", "argon2d500"},
     {"argon2d-uis", "argon2d4096"},
+    {"aquachain", "argon2id"},
     {"bitcore", "timetravel10"},
     {"bitzeny", "yescryptr8"},
     {"blake256r8", "blakecoin"},

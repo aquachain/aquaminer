@@ -87,4 +87,3 @@ bool register_argon2_algo( algo_gate_t* gate )
   gate->get_max64       = (void*)&argon2_get_max64;
   return true;
 };
-

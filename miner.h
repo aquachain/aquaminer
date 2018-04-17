@@ -57,7 +57,7 @@
 #ifndef min
 #define min(a,b) (a>b ? (b) :(a))
 #endif
-#ifndef max 
+#ifndef max
 #define max(a,b) (a<b ? (b) : (a))
 #endif
 */
@@ -103,7 +103,7 @@ static inline bool is_windows(void)
 	return false;
 #endif
 }
- 
+
 #include "compat.h"
 
 #ifndef ARRAY_SIZE
@@ -486,25 +486,26 @@ enum algos {
         ALGO_ALLIUM,
         ALGO_ANIME,
         ALGO_ARGON2,
+        ALGO_ARGON2IDAQUA,
         ALGO_ARGON2D250,
         ALGO_ARGON2D500,
         ALGO_ARGON2D4096,
-        ALGO_AXIOM,       
+        ALGO_AXIOM,
         ALGO_BASTION,
-        ALGO_BLAKE,       
-        ALGO_BLAKECOIN,   
+        ALGO_BLAKE,
+        ALGO_BLAKECOIN,
 //        ALGO_BLAKE2B,
-        ALGO_BLAKE2S,     
-        ALGO_BMW,        
-        ALGO_C11,         
-        ALGO_CRYPTOLIGHT, 
-        ALGO_CRYPTONIGHT, 
+        ALGO_BLAKE2S,
+        ALGO_BMW,
+        ALGO_C11,
+        ALGO_CRYPTOLIGHT,
+        ALGO_CRYPTONIGHT,
         ALGO_DECRED,
         ALGO_DEEP,
         ALGO_DMD_GR,
-        ALGO_DROP,        
-        ALGO_FRESH,       
-        ALGO_GROESTL,     
+        ALGO_DROP,
+        ALGO_FRESH,
+        ALGO_GROESTL,
         ALGO_HEAVY,
         ALGO_HMQ1725,
         ALGO_HODL,
@@ -512,29 +513,29 @@ enum algos {
         ALGO_KECCAK,
         ALGO_KECCAKC,
         ALGO_LBRY,
-        ALGO_LUFFA,       
+        ALGO_LUFFA,
         ALGO_LYRA2H,
-        ALGO_LYRA2RE,       
-        ALGO_LYRA2REV2,   
+        ALGO_LYRA2RE,
+        ALGO_LYRA2REV2,
         ALGO_LYRA2Z,
         ALGO_LYRA2Z330,
         ALGO_M7M,
-        ALGO_MYR_GR,      
+        ALGO_MYR_GR,
         ALGO_NEOSCRYPT,
-        ALGO_NIST5,       
-        ALGO_PENTABLAKE,  
+        ALGO_NIST5,
+        ALGO_PENTABLAKE,
         ALGO_PHI1612,
-        ALGO_PLUCK,       
+        ALGO_PLUCK,
         ALGO_POLYTIMOS,
         ALGO_QUARK,
-        ALGO_QUBIT,       
+        ALGO_QUBIT,
         ALGO_SCRYPT,
         ALGO_SCRYPTJANE,
         ALGO_SHA256D,
         ALGO_SHA256T,
-        ALGO_SHAVITE3,    
-        ALGO_SKEIN,       
-        ALGO_SKEIN2,      
+        ALGO_SHAVITE3,
+        ALGO_SKEIN,
+        ALGO_SKEIN2,
         ALGO_SKUNK,
         ALGO_TIMETRAVEL,
         ALGO_TIMETRAVEL10,
@@ -544,13 +545,13 @@ enum algos {
         ALGO_WHIRLPOOL,
         ALGO_WHIRLPOOLX,
         ALGO_X11,
-        ALGO_X11EVO,         
+        ALGO_X11EVO,
         ALGO_X11GOST,
         ALGO_X12,
-        ALGO_X13,         
+        ALGO_X13,
         ALGO_X13SM3,
-        ALGO_X14,        
-        ALGO_X15,       
+        ALGO_X14,
+        ALGO_X15,
         ALGO_X16R,
         ALGO_X16S,
         ALGO_X17,
@@ -567,6 +568,7 @@ static const char* const algo_names[] = {
         "allium",
         "anime",
         "argon2",
+        "argon2id",
         "argon2d250",
         "argon2d500",
         "argon2d4096",
@@ -707,6 +709,7 @@ Options:\n\
                           allium       Garlicoin (GRLC)\n\
                           anime        Animecoin (ANI)\n\
                           argon2       Argon2 Coin (AR2)\n\
+                          argon2id     Aquachain (AQUA)\n\
                           argon2d250   argon2d-crds, Credits (CRDS)\n\
                           argon2d500   argon2d-dyn, Dynamic (DYN)\n\
                           argon2d4096  argon2d-uis, Unitus (UIS)\n\
@@ -896,4 +899,3 @@ static struct option const options[] = {
 
 
 #endif /* __MINER_H__ */
-

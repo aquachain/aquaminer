@@ -352,6 +352,19 @@ static bool work_decode(const json_t *val, struct work *work) {
   return true;
 }
 
+static bool work_decode_eth(const json_t *val, struct work *work) {
+  if (!algo_gate.work_decode(val, work))
+    return false;
+  if (!allow_mininginfo)
+    net_diff = algo_gate.calc_network_diff(work);
+  work->targetdiff = target_to_diff(work->target);
+  // for api stats, on longpoll pools
+  stratum_diff = work->targetdiff;
+  work->sharediff = 0;
+  algo_gate.display_extra_data(work, &net_blocks);
+  return true;
+}
+
 // good alternative for wallet mining, difficulty and net hashrate
 static const char *info_req =
     "{\"method\": \"getmininginfo\", \"params\": [], \"id\":8}\r\n";
@@ -2206,7 +2219,7 @@ static void *stratum_thread(void *userdata) {
       s = stratum_recv_line(&stratum);
     if (!s) {
       stratum_disconnect(&stratum);
-      //	  applog(LOG_WARNING, "Stratum connection interrupted");
+      	  applog(LOG_WARNING, "Stratum connection interrupted");
       continue;
     }
     if (!stratum_handle_method(&stratum, s))
