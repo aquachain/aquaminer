@@ -47,6 +47,7 @@ Supported Algorithms
 
                           allium       Garlicoin
                           anime        Animecoin
+                          aquachain    Aquachain
                           argon2       Argon2 coin (AR2)
                           argon2d250   argon2d-crds, Credits (CRDS)
                           argon2d500   argon2d-dyn,  Dynamic (DYN)

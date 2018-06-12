@@ -364,6 +364,12 @@ struct work {
         uint32_t nonces[8];
 };
 
+struct ethwork {
+	uint32_t data[48];
+	uint32_t seed[48];
+	uint32_t target[8];
+};
+
 struct stratum_job {
 	char *job_id;
 	unsigned char prevhash[32];
