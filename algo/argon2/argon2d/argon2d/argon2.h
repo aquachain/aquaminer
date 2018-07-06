@@ -51,7 +51,7 @@ extern "C" {
 #define ARGON2_MAX_THREADS UINT32_C(0xFFFFFF)
 
 /* Number of synchronization points between lanes per pass */
-#define ARGON2_SYNC_POINTS UINT32_C(1)
+#define ARGON2_SYNC_POINTS UINT32_C(4)
 
 /* Minimum and maximum digest size in bytes */
 #define ARGON2_MIN_OUTLEN UINT32_C(4)
